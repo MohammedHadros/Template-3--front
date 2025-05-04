@@ -101,6 +101,7 @@ a{
     .main-title:hover::before{
         z-index: -1;
         animation: left-move 0.5s linear forwards;
+        
     }
     .main-title:hover::after{
         z-index: -1;
@@ -174,6 +175,7 @@ a{
     header .contener  .main-nav{
         display: flex;
         align-items: center;
+        justify-content: flex-end;
     }
     header .main-nav > li >a{
         padding: 0 30px;
@@ -192,7 +194,7 @@ a{
         color: var(--main-color);
     }
     header .main-nav > li >a:before{
-        content: "";content: "";
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -235,7 +237,9 @@ a{
         display: none;
         flex-wrap: wrap;
     }
-    header .main-nav li:last-child:hover .mega-menu{
+    header .main-nav li:last-child:hover .mega-menu ,
+    .mega-menu:hover,
+    header .main-nav li:last-child a:hover .mega-menu{
         display: flex;
     }
 
@@ -246,7 +250,7 @@ a{
     header  .main-nav  .mega-menu .imge img{
         width: 100%;
         position: relative;
-      /*  animation: up-down-slow 4s linear infinite;*/
+        animation: up-down-slow 8s linear infinite;
     }
     header  .main-nav  .mega-menu .links{
         flex-basis: 24%;
@@ -319,6 +323,7 @@ a{
 
      .landing{
          position: relative;
+         overflow: hidden;
      }
      .landing::before{
          content: "";
@@ -455,18 +460,15 @@ a{
         justify-content: space-between;
         align-items: center;
         padding:18px  20px;
-        border-top: 1px solid var(--weak-border);      
-
+        border-top: 1px solid var(--weak-border); 
+        color: var(--main-color);     
     }
 
     .articals .contener .card .more a{
-        color: var(--main-color);
         font-weight: bold;
         text-transform: capitalize;
     }
-    .articals .contener .card .more i{
-        color: var(--main-color);
-    }
+
     .articals .contener .card:hover  i{
         animation: left-right 0.5s linear infinite;
         position: absolute;
@@ -988,13 +990,12 @@ a{
         position: relative; 
         display: flex;
         justify-content: space-between;
- 
      }
      .our-skils .contener .skils .prog-holder h4 span{
         font-size: 12px;
         color: var(--main-color);
         border: 1px solid #ccc;
-        padding: 3px 5px;
+        padding: 4px 5px;
         border-radius: 5px;
 
 
@@ -1009,6 +1010,8 @@ a{
         content: attr(data-progres);
         color: white;
         background-color: black;
+        width: 40px;
+        height: 20px;
         padding: 5px;
         position: absolute;
         top: -40px;
